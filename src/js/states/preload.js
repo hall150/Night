@@ -5,7 +5,7 @@ export default class Preload extends Phaser.State {
       this.load.image('sky', 'assets/images/background/background.png');
 
       // Spritesheets
-      this.load.tilemap('yoshis-island-1-tilemap', 'assets/images/tiles/yoshis-island-1-tilemap.json', null, Phaser.Tilemap.TILED_JSON);
+      this.load.tilemap('forest', 'assets/images/tiles/forest.json', null, Phaser.Tilemap.TILED_JSON);
       this.load.spritesheet('collision-spritesheet', 'assets/images/tiles/ninja-tiles16.png', 16, 16);
       this.load.atlasJSONArray('mario', 'assets/images/sprites/mario.png', 'assets/images/sprites/mario.json');
       this.load.atlasJSONArray('items', 'assets/images/items/items.png', 'assets/images/items/items.json');
