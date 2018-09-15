@@ -9,7 +9,7 @@ var MAP_HEIGHT_16 = 416;
 var MAP_HEIGHT_32 = 400;
 var MAP_HEIGHT_48 = 384;
 
-map.buildYoshisIsland1 = function () {
+map.forest = function () {
 
   // SLOPES
   buildSlopes();
@@ -259,41 +259,6 @@ function createPlatforms() {
   platform.body.immovable = true;
 }
 
-function createPipes(){
-  var pipePlatform = GAME.platforms.create(1808, MAP_HEIGHT - 96, 'pipes',4);
-  pipePlatform.body.immovable = true;
-  pipePlatform = GAME.platforms.create(1809, MAP_HEIGHT - 64, 'pipes',44);
-  pipePlatform.body.immovable = true;
-
-  pipePlatform = GAME.platforms.create(1920, MAP_HEIGHT - 80, 'pipes',4);
-  pipePlatform.body.immovable = true;
-
-  // Slope Pipes
-  var pipe = GAME.ledges.create(818, MAP_HEIGHT - 101, 'background-objects', 26);
-  pipe = GAME.ledges.create(871, MAP_HEIGHT - 144, 'background-objects', 24);
-  pipe = GAME.ledges.create(1986, MAP_HEIGHT - 101, 'background-objects',26);
-  pipe = GAME.ledges.create(2039, MAP_HEIGHT - 144, 'background-objects',24);
-
-  var pipes = GAME.platforms.create(2096, MAP_HEIGHT - 112, 'background-objects', 32);
-  pipes.body.immovable = true;
-
-  // Silver Pipe
-  pipePlatform = GAME.platforms.create(2224, MAP_HEIGHT - 112, 'pipes',3);
-  pipePlatform.body.immovable = true;
-  pipePlatform = GAME.platforms.create(2225, MAP_HEIGHT - 80, 'pipes',43);
-  pipePlatform.body.immovable = true;
-  pipePlatform = GAME.platforms.create(2225, MAP_HEIGHT - 64, 'pipes',43);
-  pipePlatform.body.immovable = true;
-
-  // Last Pipe
-  pipePlatform = GAME.platforms.create(4544, MAP_HEIGHT - 112, 'pipes',87);
-  pipePlatform.body.immovable = true;
-  pipePlatform = GAME.platforms.create(4545, MAP_HEIGHT - 80, 'pipes',102);
-  pipePlatform.body.immovable = true;
-  pipePlatform = GAME.platforms.create(4545, MAP_HEIGHT - 64, 'pipes',102);
-  pipePlatform.body.immovable = true;
-}
-
 function createBlocks(){
   var block = GAME.blocksGroup.create(1904, MAP_HEIGHT - 64, 'background-objects', 67);
   block.body.immovable = true;
@@ -417,7 +382,7 @@ function createBush(x,y,frame) {
 
 function buildSlopes() {
   // Slopes
-	GAME.mapSlope = GAME.add.tilemap('yoshis-island-1-tilemap');
+	GAME.mapSlope = GAME.add.tilemap('forest');
 	GAME.mapSlope.addTilesetImage('collision', 'collision-spritesheet');
 	GAME.groundSlope = GAME.mapSlope.createLayer('collision');
 	GAME.slopes.convertTilemapLayer(GAME.groundSlope, {
