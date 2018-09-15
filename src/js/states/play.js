@@ -13,7 +13,7 @@ export default class Play extends Phaser.State {
         /****************************************
       		MAP
       	****************************************/
-      	map.buildYoshisIsland1();
+      	map.forest();
 
       	/****************************************
       		AUDIO
